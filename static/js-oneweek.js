@@ -63,14 +63,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   $(function () {
-    let member_img = $(".members>img");
+    $("#member1-img").click(() => {
+      toView();
+      show_member(0);
+    });
+    $("#member2-img").click(() => {
+      toView();
+      show_member(1);
+    });
+    $("#member3-img").click(() => {
+      toView();
+      show_member(2);
+    });
   });
   function toView() {
     window.scrollTo(0, window.innerHeight * 1);
   }
 });
 
-//-------------------------------------------------------------------------
+//-------------------------휠스크롤기능------------------------------------------------
 
 $(function () {
   window.onload = function () {

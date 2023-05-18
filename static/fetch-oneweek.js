@@ -15,6 +15,7 @@ $(document).ready(function () {
 });
 function show_member(x) {
   $("#memberContents2").empty();
+  let tab_click = document.querySelectorAll("#tabMember li");
 
   /* get 요청 확인 fetch 코드 */
   fetch("/member")
@@ -85,6 +86,7 @@ function show_member(x) {
       </div>`;
 
       $("#memberContents2").append(temp_html);
+      tab_click[x].click();
     });
 }
 

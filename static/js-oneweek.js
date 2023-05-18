@@ -1,3 +1,4 @@
+let pageIndex = Math.round($(window).scrollTop() / $(window).height());
 $(function () {
   let $tabButtons = $("#tabMember>li");
   let $tabContents = $(".memberContent");
@@ -64,20 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $(function () {
     $("#member1-img").click(() => {
+      let m1 = document.querySelector("#team1");
       toView();
-      show_member(0);
+      m1.click();
     });
     $("#member2-img").click(() => {
+      let m2 = document.querySelector("#team2");
       toView();
-      show_member(1);
+      m2.click();
     });
     $("#member3-img").click(() => {
+      let m3 = document.querySelector("#team3");
       toView();
-      show_member(2);
+      m3.click();
     });
   });
   function toView() {
-    window.scrollTo(0, window.innerHeight * 1);
+    $("html").animate({ scrollTop: $(window).height() });
+    pageIndex = 1;
   }
 });
 
@@ -90,8 +95,6 @@ $(function () {
       pageIndex = 0;
     }, 100);
   };
-
-  let pageIndex = Math.round($(window).scrollTop() / $(window).height());
 
   $("html").animate({ scrollTop: pageIndex * $(window).height() }, 10);
 
@@ -129,3 +132,5 @@ $(function () {
     windowHeight = $window.height();
   });
 });
+
+//-------------------------------멤버박스 애니메이션-------//

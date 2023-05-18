@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>OneWeek Team</title>
+  <!-- 별도의 css파일을 만들어서 연결하여 사용 -->
+  <link rel="stylesheet" href="./static/style-oneweek.css" />
+  <!-- 별도의 js파일을 만들어서 연결하여 사용 -->
+  <script src="./static/js-oneweek.js"></script>
+
+  <!-- 호진 js-->
+  <script src="./static/js-oneweek_hj.js"></script>
+
+  <!-- 새로 작성한 부분 -hojin -->
+
+</head>
+
+
+
+<body>
+  <div id="wrap">
+    <div class="top-banner">
+      <h3 class="banner">Meet The "1 Week" Team</h3>
+    </div>
+    <div class="members">
+      <p>
+      <div class="member"><img id="member1-img" src="./static/image/img.png" alt="" width="90%" height="100%"
+          position="center">
+      </div>
+      <div class="member"><img id="member2-img" src="./static/image/img.png" alt="" width="90%" height="100%"
+          position="center">
+      </div>
+      <div class="member"><img id="member3-img" src="./static/image/img.png" alt="" width="90%" height="100%"
+          position="center">
+      </div>
+      </p>
+    </div>
+    <div id="team" class="page">
+      <div class="intro-container">
+        <div class="team-introbox">
+          <div class="team-logo"><img
+              style="-moz-border-radius: 14px; -khtml-border-radius: 14px; -webkit-border-radius: 14px; top:50%; left:60%; transform:translate(-50%,-50%); position:absolute;"
+              src="./static/image/logo.png" alt="" width="200px"></div>
+          <div class="team-intro">
+            <p>안녕하세요 저희는 내일배움캠프 A반 8조 1Week 입니다 !</p>
+            <p>어떤 프로젝트든 일주일안에 만들정도로 노력하는 개발자들입니다 !</p>
+          </div>
+        </div>
+      </div>
+      <div class="top-container">
+        <div class="team-goals-container">
+          <div class="goal-title">
+            <h2>우리팀 목표</h2>
+            <div class="team-goals">
+              <ul class="goals-list">
+                <li>
+                  주어진 시간동안 협업을 통하여 목표하는 팀 소개 페이지 완성하여 제출하기
+                </li>
+                <li>팀원들끼리 이끌어주며 성장하는 시간이 되도록 하기</li>
+                <li>모르는 것도 찾아보고 배우며 커뮤니케이션 능력 및 개발 능력 늘려가기</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="team-rules-container">
+          <h2>우리팀 규칙</h2>
+          <div class="rules-title">
+            <div class="team-rules">
+              <ul class="rules-list">
+                <li>09:00부터 2시간마다 생존신고하기>.< </li>
+                <li>언제든 편하게 질문하고 친절하게 답변해주기!</li>
+                <li><span>13:00~14:00 점심시간</span><br />
+                  <span>19:00~20:00 저녁시간</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="go-to-detail">
+        <div class="go-to-detail-arrow"><img id="blink" src="./static/image/arrow-down.PNG" alt=""></div>
+        <p style="margin-top:33px; font-size:20px; font-weight:bold;">팀 One Week 더 상세히 알아보기</p>
+        <div class="go-to-detail-arrow"><img id="blink2" src="./static/image/arrow-down.PNG" alt=""></div>
+      </div>
+      <!-- 경모님 작성 부분 -->
+    </div>
+
+
+    <!-- 한별님 작성 부분 page:2 -->
+    <div id="member" class="page">
+      <div id="logoBox">
+        <img src="./static/image/logo.png" alt="logo" id="logoImage" />
+      </div>
+
+      <div id="memberContents">
+        <div id="selfiBox">
+          <img src="./static/image/hanbyeol.jpg" id="slefi" />
+        </div>
+
+        <div id="memberInfor">
+          <!-- 어떤 구조로 짜야할지 고민중.. -->
+          <table>
+            <tbody>
+              <tr>
+                <td>이름</td>
+                <td id="name">이한별</td>
+              </tr>
+              <tr>
+                <td>나이</td>
+                <td id="age">27</td>
+              </tr>
+              <tr>
+                <td>MBTI</td>
+                <td id="mbti">ENTJ</td>
+              </tr>
+              <tr>
+                <td>혈액형</td>
+                <td id="blood">O형</td>
+              </tr>
+              <tr>
+                <td>거주지</td>
+                <td id="address">광주</td>
+              </tr>
+              <tr>
+                <td>취미</td>
+                <td id="hobby">ott 시청</td>
+              </tr>
+              <tr>
+                <td>블로그</td>
+                <td>
+                  <a href="https://velog.io/@lhb971219" target="_blank" id="blog">
+                    <img
+                      src="https://nitter.net/pic/pbs.twimg.com%2Fprofile_images%2F1228368893321736193%2FOv0og7E8.jpg"
+                      alt="velog" width="20px" /></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="makeUpMyMind">
+            <ul>
+              <li>
+                하고싶은 말
+                <ul>
+                  <li>`안녕하세요 :) 
+                  잘부탁드립니다 !`</li>
+                </ul>
+              </li>
+              <li>
+                각오
+                <ul>
+                  <li>많은 친구 및 동료 사귀기 !</li>
+                  <li>내일배움캠프 완벽 수료 !</li>
+                  <li>멋진 프론트엔드 개발자 되기 !</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="memberBtns">
+          <ul>
+            <li class="memberOn" id="team1" onclick="show_member(0)">이한별</li>
+            <li id="team2" onclick="show_member(1)">임호진</li>
+            <li id="team3" onclick="show_member(2)">서경모</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 한별님 작성 부분 page:3 -->
+    <div id="comments" class="page">
+      <p>서로에게 하고 싶은 말을 남겨주세요</p>
+
+      <ul id="tabMember">
+        <li data-index="0" class="on" onclick="show_comment1()">이한별</li>
+        <li data-index="0" onclick="show_comment2()">임호진</li>
+        <li data-index="0" onclick="show_comment3()">서경모</li>
+      </ul>
+
+      <div id="tabContents-member1" class="memberContent on">
+        <p>작성자를 선택해주세요.</p>
+        <select id="selectWriter">
+          <option selected>선택안함</option>
+          <option>이한별</option>
+          <option>임호진</option>
+          <option>서경모</option>
+        </select>
+
+        <div id="saveComment">
+          <input type="text" placeholder="하고 싶은 말을 이 곳에 작성해주세요." id="comment" />
+          <button onclick="saveComment()" id="saveBtn">등록하기</button>
+        </div>
+
+        <div id="commentsArea">
+          <table>
+            <thead>
+              <tr>
+                <th>작성자</th>
+                <th>남기는 말</th>
+              </tr>
+            </thead>
+            <tbody id="real_commentsArea">
+              <tr>
+                <td>팀원1</td>
+                <td>
+                  8조 화이팅!~!8조 화이팅!~!8조 화이팅!~!8조 화이팅!~!8조
+                  화이팅!~!8조 화이팅!~!8조 화이팅!~!8조 화이팅!~!8조
+                  화이팅!~!8조 화이팅!~!
+                </td>
+                <td><button onclick="editComment()">수정</button></td>
+                <td><button onclick="deleteComment()">삭제</button></td>
+              </tr>
+              <tr>
+                <td>팀원2</td>
+                <td>One Week 화이팅ㅎㅎ!~!</td>
+                <td><button onclick="editComment()">수정</button></td>
+                <td><button onclick="deleteComment()">삭제</button></td>
+              </tr>
+                <td><button onclick="editComment()">수정</button></td>
+                <td><button onclick="deleteComment()">삭제</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /commentsArea -->
+      </div>
+      <!-- /tabContents-member1 -->
+    </div>
+  </div>
+      
+</body>
+
+</html>

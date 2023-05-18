@@ -1,2 +1,0 @@
-# OneWeek
-one week project

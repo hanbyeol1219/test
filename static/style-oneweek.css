@@ -5,8 +5,9 @@ html,
 body {
   height: 100%;
   max-width: 1600px;
-  width: 90%;
+
   margin: 0 auto;
+  scroll-behavior: smooth !important;
 }
 
 * {
@@ -21,11 +22,8 @@ ul {
 }
 /*--------------------------------------------------------------------경모님 코드------------------*/
 .top-banner {
-  max-width: 1600px;
   width: 84%;
   position: fixed;
-  top: 12px;
-  margin-top: 10px;
   z-index: 1;
 }
 

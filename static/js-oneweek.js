@@ -1,10 +1,4 @@
 $(function () {
-  window.onload = function () {
-    setTimeout(function () {
-      scrollTo(0, 0);
-    }, 100);
-  };
-
   let $tabButtons = $("#tabMember>li");
   let $tabContents = $(".memberContent");
 
@@ -69,24 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   $(function () {
-    $("#member1-img").click(function () {
-      toView();
-    });
-    $("#member2-img").click(function () {
-      toView();
-    });
-    $("#member3-img").click(function () {
-      toView();
-    });
+    let member_img = $(".members>img");
   });
   function toView() {
-    document.getElementById("member").scrollIntoView();
+    window.scrollTo(0, window.innerHeight * 1);
   }
 });
 
 //-------------------------------------------------------------------------
 
 $(function () {
+  window.onload = function () {
+    setTimeout(function () {
+      scrollTo(0, 0);
+      pageIndex = 0;
+    }, 100);
+  };
+
   let pageIndex = Math.round($(window).scrollTop() / $(window).height());
 
   $("html").animate({ scrollTop: pageIndex * $(window).height() }, 10);

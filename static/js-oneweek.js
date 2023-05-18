@@ -4,7 +4,7 @@ $(function () {
   let $tabContents = $(".memberContent");
 
   $tabButtons.on("click", function () {
-    $tabContents.removeClass("on");
+    //$tabContents.removeClass("on");
     if ($(this).is(".on")) return;
 
     $(this).addClass("on").siblings().removeClass("on");

@@ -109,7 +109,7 @@ $("#team2").click(function () {
 });
 
 function show_comment1() {
-  $("#commentsArea").empty();
+  $(".real_commentsArea").empty();
 
   num = 1;
 
@@ -119,33 +119,26 @@ function show_comment1() {
       let rows = data["result"];
 
       rows.forEach((a) => {
+        let id = a["id"];
+
         let from = a["from"];
         let comment = a["comment"];
 
         let temp_html = `
-              <table>
-                <thead>
-                  <tr>
-                    <th>작성자</th>
-                    <th>남기는 말</th>
-                  </tr>
-                </thead>
-                <tbody id="real_commentsArea">
                   <tr>
                     <td>${from}</td>
                     <td>${comment}</td>
                     <td><button onclick="editComment()">수정</button></td>
-                    <td><button onclick="deleteComment() ">삭제</button></td>
+                    <td><button onclick="deleteComment1('${id}')">삭제</button></td>
                   </tr>
-                </tbody>
-              </table>
                                     `;
-        $("#commentsArea").append(temp_html);
+        $(".real_commentsArea").append(temp_html);
       });
     });
 }
 function show_comment2() {
-  $("#commentsArea").empty();
+  $(".real_commentsArea").empty();
+
   num = 2;
 
   fetch("/hojin")
@@ -154,34 +147,25 @@ function show_comment2() {
       let rows = data["result"];
 
       rows.forEach((a) => {
+        let id = a["id"];
+
         let from = a["from"];
         let comment = a["comment"];
 
         let temp_html = `
-              <table>
-                <thead>
-                  <tr>
-                    <th>작성자</th>
-                    <th>남기는 말</th>
-                  </tr>
-                </thead>
-                <tbody id="real_commentsArea">
                   <tr>
                     <td>${from}</td>
                     <td>${comment}</td>
                     <td><button onclick="editComment()">수정</button></td>
-                    <td><button onclick="deleteComment()">삭제</button></td>
+                    <td><button onclick="deleteComment2('${id}')">삭제</button></td>
                   </tr>
-                </tbody>
-              </table>
-        
                                     `;
-        $("#commentsArea").append(temp_html);
+        $(".real_commentsArea").append(temp_html);
       });
     });
 }
 function show_comment3() {
-  $("#commentsArea").empty();
+  $(".real_commentsArea").empty();
 
   num = 3;
 
@@ -191,36 +175,27 @@ function show_comment3() {
       let rows = data["result"];
 
       rows.forEach((a) => {
+        let id = a["id"];
+
         let from = a["from"];
         let comment = a["comment"];
 
         let temp_html = `
-              
-              <table>
-                <thead>
-                  <tr>
-                    <th>작성자</th>
-                    <th>남기는 말</th>
-                  </tr>
-                </thead>
-                <tbody id="real_commentsArea">
                   <tr>
                     <td>${from}</td>
                     <td>${comment}</td>
                     <td><button onclick="editComment()">수정</button></td>
-                    <td><button onclick="deleteComment()">삭제</button></td>
+                    <td><button onclick="deleteComment3('${id}')">삭제</button></td>
                   </tr>
-                </tbody>
-              </table>
                                     `;
-        $("#commentsArea").append(temp_html);
+        $(".real_commentsArea").append(temp_html);
       });
     });
 }
 
 function saveComment() {
-  let name = $("#selectWriter option:selected").val();
-  let message = $("#comment").val();
+  let name = $(".selectWriter option:selected").val();
+  let message = $(".comment").val();
 
   let formData = new FormData();
   formData.append("send_message", message);
@@ -257,4 +232,39 @@ function saveComment() {
 
     default:
   }
+}
+
+function deleteComment1(id) {
+  let formData = new FormData();
+  formData.append("id", id);
+
+  fetch("/delComment1", { method: "POST", body: formData })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data["msg"]);
+      window.location.reload();
+    });
+}
+function deleteComment2(id) {
+  let formData = new FormData();
+  formData.append("id", id);
+
+  fetch("/delComment2", { method: "POST", body: formData })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data["msg"]);
+      window.location.reload();
+    });
+}
+
+function deleteComment3(id) {
+  let formData = new FormData();
+  formData.append("id", id);
+
+  fetch("/delComment3", { method: "POST", body: formData })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data["msg"]);
+      window.location.reload();
+    });
 }

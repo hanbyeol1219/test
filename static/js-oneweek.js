@@ -83,6 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function toView() {
     $("html").animate({ scrollTop: $(window).height() });
     pageIndex = 1;
+    if (pageIndex == 0) {
+      $(".page-1").css("width", "50px");
+      $(".page-2").css("width", "20px");
+      $(".page-3").css("width", "20px");
+    } else if (pageIndex == 1) {
+      $(".page-2").css("width", "50px");
+      $(".page-1").css("width", "20px");
+      $(".page-3").css("width", "20px");
+    } else {
+      $(".page-3").css("width", "50px");
+      $(".page-1").css("width", "20px");
+      $(".page-2").css("width", "20px");
+    }
   }
   $("#tVC").click(() => {
     toViewComment();
@@ -90,6 +103,32 @@ document.addEventListener("DOMContentLoaded", () => {
   function toViewComment() {
     $("html").animate({ scrollTop: $(window).height() * 2 });
     pageIndex = 2;
+    if (pageIndex == 0) {
+      $(".page-1").css("width", "50px");
+      $(".page-2").css("width", "20px");
+      $(".page-3").css("width", "20px");
+    } else if (pageIndex == 1) {
+      $(".page-2").css("width", "50px");
+      $(".page-1").css("width", "20px");
+      $(".page-3").css("width", "20px");
+    } else {
+      $(".page-3").css("width", "50px");
+      $(".page-1").css("width", "20px");
+      $(".page-2").css("width", "20px");
+    }
+  }
+  if (pageIndex == 0) {
+    $(".page-1").css("width", "50px");
+    $(".page-2").css("width", "20px");
+    $(".page-3").css("width", "20px");
+  } else if (pageIndex == 1) {
+    $(".page-2").css("width", "50px");
+    $(".page-1").css("width", "20px");
+    $(".page-3").css("width", "20px");
+  } else {
+    $(".page-3").css("width", "50px");
+    $(".page-1").css("width", "20px");
+    $(".page-2").css("width", "20px");
   }
 });
 
@@ -122,11 +161,37 @@ $(function () {
         if (pageIndex >= lastPageIndex) return;
 
         pageIndex++;
+        if (pageIndex == 0) {
+          $(".page-1").css("width", "50px");
+          $(".page-2").css("width", "20px");
+          $(".page-3").css("width", "20px");
+        } else if (pageIndex == 1) {
+          $(".page-2").css("width", "50px");
+          $(".page-1").css("width", "20px");
+          $(".page-3").css("width", "20px");
+        } else {
+          $(".page-3").css("width", "50px");
+          $(".page-1").css("width", "20px");
+          $(".page-2").css("width", "20px");
+        }
       } else if (event.deltaY < 0) {
         if (pageIndex <= 0) return;
 
         // 1.4. 이전 페이지로 스크롤 한다.
         pageIndex--;
+        if (pageIndex == 0) {
+          $(".page-1").css("width", "50px");
+          $(".page-2").css("width", "20px");
+          $(".page-3").css("width", "20px");
+        } else if (pageIndex == 1) {
+          $(".page-2").css("width", "50px");
+          $(".page-1").css("width", "20px");
+          $(".page-3").css("width", "20px");
+        } else {
+          $(".page-3").css("width", "50px");
+          $(".page-1").css("width", "20px");
+          $(".page-2").css("width", "20px");
+        }
       }
       let posTop = windowHeight * pageIndex;
 

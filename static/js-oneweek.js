@@ -84,6 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     $("html").animate({ scrollTop: $(window).height() });
     pageIndex = 1;
   }
+  $("#tVC").click(() => {
+    toViewComment();
+  });
+  function toViewComment() {
+    $("html").animate({ scrollTop: $(window).height() * 2 });
+    pageIndex = 2;
+  }
 });
 
 //-------------------------휠스크롤기능------------------------------------------------
@@ -133,4 +140,4 @@ $(function () {
   });
 });
 
-//-------------------------------멤버박스 애니메이션-------//
+//-------------------------------페이지 확인-------//

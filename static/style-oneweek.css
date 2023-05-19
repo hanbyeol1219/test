@@ -3,23 +3,14 @@
 
 html,
 body {
-  height: 100%;
   max-width: 1600px;
-
   margin: 0 auto;
-  scroll-behavior: smooth !important;
+  padding: 0;
 }
 
 * {
   font-family: "Gowun Dodum", sans-serif;
   font-size: 16px;
-}
-
-#m-booked-vertical-one-prime-11785 {
-  position: fixed;
-  z-index: 2;
-  margin-left: 74%;
-  margin-top: 7%;
 }
 
 ul {
@@ -29,15 +20,46 @@ ul {
 }
 /*--------------------------------------------------------------------경모님 코드------------------*/
 .top-banner {
-  width: 84%;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toViewComment {
+  position: fixed;
+  z-index: 3;
+  top: 23px;
+  left: 76%;
+}
+#tVC {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-list {
+  position: fixed;
+  z-index: 3;
+  left: 2%;
+  top: 43%;
+}
+
+.page-1,
+.page-2,
+.page-3 {
+  width: 20px;
+  height: 3px;
+  background-color: gold;
+  margin: 15px 0;
 }
 
 .banner {
   font-family: "Mogra", cursive;
   text-align: center;
   color: palevioletred;
+  margin: 0;
 }
 
 .members {
@@ -326,7 +348,7 @@ ul {
 .memberContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   display: none;
